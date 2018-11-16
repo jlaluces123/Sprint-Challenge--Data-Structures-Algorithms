@@ -15,6 +15,18 @@ class BinarySearchTree:
 
   def breadth_first_for_each(self, cb):
     # --> Try to use queue structure
+    queue = []
+    queue.append(self)
+
+    while len(queue) > 0:
+      curr_node = queue.pop(0)
+
+      if curr_node.left:
+        queue.append(curr_node.left)
+      if curr_node.right:
+        queue.append(curr_node.right)
+
+      cb(curr_node.value)
 
 
     # ------------------ works, but not happy with it -------------
