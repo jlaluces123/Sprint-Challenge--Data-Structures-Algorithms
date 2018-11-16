@@ -14,7 +14,26 @@ class BinarySearchTree:
       self.right.depth_first_for_each(cb)
 
   def breadth_first_for_each(self, cb):
-    pass
+    # --> Try to use queue structure
+
+
+    # ------------------ works, but not happy with it -------------
+    # queue = []
+    # queue.append(self)
+
+    # # --> Create loop for when queue has items in it
+    # while len(queue) > 0:
+    #   root_node = queue[0] # --> hold root node
+
+    #   if root_node.left:
+    #     queue.append(root_node.left) # --> Append all nodes from left side of the root node to our queue
+
+    #   if root_node.right:
+    #     queue.append(root_node.right) # --> Same thing for all nodes on the right side of the root node
+
+    #   queue.pop(0)
+    #   cb(root_node.value)
+
 
   def insert(self, value):
     new_tree = BinarySearchTree(value)
