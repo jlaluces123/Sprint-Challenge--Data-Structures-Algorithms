@@ -1,13 +1,14 @@
 def heapsort(arr):
-  new_heap = Heap()
-  arr_sort = []
+  new_heap = Heap() # --> initialize new heap
+  arr_sort = [] # --> Initialize a list to be sorted later on
 
-  for i in arr:
+  for i in arr: # --> loop through given array and insert values into new heap to be sorted
     new_heap.insert(i)
 
-  while len(new_heap.storage) > 0:
+  while len(new_heap.storage) > 0: 
     arr_sort.insert(0, new_heap.delete())
 
+  print(arr_sort)
   return arr_sort
 
  
